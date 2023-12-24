@@ -45,18 +45,19 @@
     }
 ?>
 
-    <div id="content">
+<div id="content">
         <h1>My ToDo List App</h1>
-        <form method="post" id="addForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-           <input type="text" name="new_task" id="new-item" placeholder="A new item..." />
-           <button name="add_btn" id="add-btn">Add</button>
-           <div class="buttons">
-              <button type="submit" class="btn" name="delete_btn">Delete</button>
-              <button type="submit" class="btn" name="mark_done_btn">Mark as done</button>
-              <button type="submit" class="btn" name="mark_all_done_btn">Mark All as Done</button> <!-- New BUTTON -->
-           </div>
-           <?php get_all_todos();?>
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+            <input type="text" name="new_task" id="new-item" placeholder="Add a new item..." />
+            <button type="submit" name="add_btn" id="add-btn">Add</button>
+            <div class="buttons">
+                <button type="submit" class="btn" name="delete_btn">Delete</button>
+                <button type="submit" class="btn" name="mark_done_btn">Mark as Done</button>
+                <button type="submit" class="btn" name="mark_all_done_btn">Mark All as Done</button>
+            </div>
+            <?php get_all_todos(); ?>
         </form>
+        <a href="completed_tasks.php">View Completed Tasks</a>
     </div>
-  </body>
+</body>
 </html>
